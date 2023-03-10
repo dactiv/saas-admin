@@ -297,9 +297,9 @@ export default {
   },
   created() {
 
-    this.loadConfigEnumerates({admin:[{id:"DisabledOrEnabled"},{id:"YesOrNo"}]}).then((r) => {
-      this.statusOptions = r.data.data.admin.DisabledOrEnabled;
-      this.yesOrNoOptions = r.data.data.admin.YesOrNo;
+    this.loadConfigEnumerates({config:[{id:"DisabledOrEnabled"},{id:"YesOrNo"}]}).then((r) => {
+      this.statusOptions = r.data.data.config.DisabledOrEnabled;
+      this.yesOrNoOptions = r.data.data.config.YesOrNo;
     });
 
     if (this.$route.query.id !== undefined) {

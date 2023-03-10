@@ -303,9 +303,9 @@ export default {
   },
   created() {
 
-    this.loadConfigEnumerates({admin:[{id:"UserStatus"}, {id:"GenderEnum"}]}).then((r) => {
-      this.statusOptions = r.data.data.admin.UserStatus;
-      this.genderOptions = r.data.data.admin.GenderEnum;
+    this.loadConfigEnumerates({config:[{id:"UserStatus"}, {id:"GenderEnum"}]}).then((r) => {
+      this.statusOptions = r.data.data.config.UserStatus;
+      this.genderOptions = r.data.data.config.GenderEnum;
     });
 
     if (this.$route.query.id !== undefined) {

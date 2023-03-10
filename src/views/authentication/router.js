@@ -34,42 +34,6 @@ export const router = [{
         selectMenu: process.env.VUE_APP_SITE_ROOT + "/authentication/console/user"
     }
 },{
-    path: "authentication/teacher",
-    component: () => import("@/views/authentication/teacher/Index.vue"),
-    name: "authentication_teacher",
-    meta: {
-        title: "教师管理",
-        parent: "organization"
-    }
-},{
-    path: "authentication/teacher/edit",
-    component: () => import("@/views/authentication/teacher/Edit.vue"),
-    name: "authentication_teacher_edit",
-    meta: {
-        title: "编辑教师",
-        parent: "organization",
-        authentication: true,
-        selectMenu: process.env.VUE_APP_SITE_ROOT + "/authentication/teacher"
-    }
-},{
-    path: "authentication/student",
-    component: () => import("@/views/authentication/student/Index.vue"),
-    name: "authentication_student",
-    meta: {
-        title: "学生管理",
-        parent: "organization"
-    }
-},{
-    path: "authentication/student/edit",
-    component: () => import("@/views/authentication/student/Edit.vue"),
-    name: "authentication_student_edit",
-    meta: {
-        title: "编辑学生",
-        parent: "organization",
-        authentication: true,
-        selectMenu: process.env.VUE_APP_SITE_ROOT + "/authentication/student"
-    }
-},{
     path: "authentication/department",
     component: () => import("@/views/authentication/department/Index.vue"),
     name: "authentication_department",

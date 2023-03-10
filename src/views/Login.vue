@@ -125,7 +125,7 @@ export default {
       this.form[this.captcha.data.paramName] = this.captcha.data.token.name;
     },
     generatePictureCaptcha() {
-      this.captcha.pictureCaptchaUrl = "/api/captcha/generateCaptcha?" + this.captcha.data.paramName + "=" + this.captcha.data.token.name + "&height=30&time=" + new Date().getTime();
+      this.captcha.pictureCaptchaUrl = "/api/config/captcha/generateCaptcha?" + this.captcha.data.paramName + "=" + this.captcha.data.token.name + "&height=30&time=" + new Date().getTime();
     },
     submitForm(form) {
       this.$refs[form].validate().then(() => {

@@ -45,11 +45,6 @@
 
         <a-divider orientation="left">表单信息</a-divider>
         <form-designer v-if="this.apply.formContent && this.apply.formType === 10" ref="form-designer" :form-data="this.apply.applyContent" pattern="readPretty" :design="false" :layout="this.apply.formContent.layout" :config="this.apply.formContent.config" :name="this.apply.formName" />
-        <curriculum-detail v-if="this.apply.formType === 20" :id="this.apply.formId" :read-status="['read','audit']"/>
-        <class-hour-content-detail v-if="this.apply.formType === 30" :id="this.apply.formId" />
-        <examination-detail v-if="this.apply.formType === 40" :id="this.apply.formId" />
-        <objective-question-detail v-if="this.apply.formType === 50" :id="this.apply.formId" />
-        <subjective-question-detail v-if="this.apply.formType === 60" :id="this.apply.formId" />
 
         <template v-if="this.apply.status.value !== 10">
           <a-divider orientation="left"><a-space>审批信息 <a-tag>{{this.apply.approvalType.name}}</a-tag></a-space></a-divider>
@@ -127,15 +122,9 @@
 
 import FormDesigner from '@/components/form-designer/FormDesigner'
 
-import CurriculumDetail from '@/components/resources/curriculum/Detail'
-import ClassHourContentDetail from '@/components/resources/curriculum/chapter/ClassHourContentDetail'
-import ExaminationDetail from '@/components/resources/curriculum/examination/ExaminationDetail'
-import ObjectiveQuestionDetail from '@/components/resources/curriculum/question/ObjectiveQuestionDetail'
-import SubjectiveQuestionDetail from '@/components/resources/curriculum/question/SubjectiveQuestionDetail'
-
 export default {
   name: "WorkflowApplyDetail",
-  components:{FormDesigner, CurriculumDetail, ClassHourContentDetail, ExaminationDetail, ObjectiveQuestionDetail, SubjectiveQuestionDetail},
+  components:{FormDesigner},
   created() {
 
     if (!this.$route.query.id) {

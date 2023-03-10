@@ -261,9 +261,9 @@ export default {
     }
   },
   created() {
-    this.loadConfigEnumerates({admin:[{id:"MessageTypeEnum"}, {id:"ExecuteStatus"}]}).then((r) => {
-      this.typeOptions = r.data.data.admin.MessageTypeEnum;
-      this.statusOptions = r.data.data.admin.ExecuteStatus;
+    this.loadConfigEnumerates({config:[{id:"MessageTypeEnum"}, {id:"ExecuteStatus"}]}).then((r) => {
+      this.typeOptions = r.data.data.config.MessageTypeEnum;
+      this.statusOptions = r.data.data.config.ExecuteStatus;
     });
     this.search(1);
   },

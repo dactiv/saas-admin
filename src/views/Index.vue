@@ -431,10 +431,6 @@ export default {
       let offset = _this.$dayjs(r.data.timestamp).valueOf() - Date.now();
       _this.$dayjs.now = function() { return _this.$dayjs(Date.now() + offset); }
 
-      if (data.semesterComplete) {
-        let semesterCompleteMonthDay = _this.$dayjs(_this.$dayjs.now().year() + "-" + data.semesterComplete);
-        this.$store.commit(LOCALE_MUTATION_TYPE.SET_SEMESTER_COMPLETE_DAY, semesterCompleteMonthDay);
-      }
     },
     menuOpen(keys) {
       this.menu.openKeys = keys.filter(key => this.menu.openKeys.indexOf(key) === -1);

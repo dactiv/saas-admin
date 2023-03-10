@@ -223,10 +223,10 @@ export default {
   },
   created() {
 
-    this.loadConfigEnumerates({admin:[{id:"DisabledOrEnabled"}, {id:"ResourceSourceEnum"}, {id:"YesOrNo"}]}).then((r) => {
-      this.statusOptions = r.data.data.admin.DisabledOrEnabled;
-      this.sourceOptions = r.data.data.admin.ResourceSourceEnum;
-      this.yesOrNoOptions = r.data.data.admin.YesOrNo;
+    this.loadConfigEnumerates({config:[{id:"DisabledOrEnabled"}, {id:"ResourceSourceEnum"}, {id:"YesOrNo"}]}).then((r) => {
+      this.statusOptions = r.data.data.config.DisabledOrEnabled;
+      this.sourceOptions = r.data.data.config.ResourceSourceEnum;
+      this.yesOrNoOptions = r.data.data.config.YesOrNo;
     });
 
     let findParentParam = {

@@ -205,9 +205,9 @@ export default {
       "filter_[type_id_eq]":this.form.typeId
     };
 
-    this.loadConfigEnumerates({admin:[{id:"DisabledOrEnabled"}, {id:"ValueTypeEnum"}]}).then((r) => {
-      this.statusOptions = r.data.data.admin.DisabledOrEnabled;
-      this.valueOptions = r.data.data.admin.ValueTypeEnum;
+    this.loadConfigEnumerates({config:[{id:"DisabledOrEnabled"}, {id:"ValueTypeEnum"}]}).then((r) => {
+      this.statusOptions = r.data.data.config.DisabledOrEnabled;
+      this.valueOptions = r.data.data.config.ValueTypeEnum;
     });
 
     if (this.$route.query.id !== undefined) {
