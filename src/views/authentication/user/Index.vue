@@ -241,6 +241,7 @@ export default {
       form:{
         "filter_[username_eq]":"",
         "filter_[real_name_like]":"",
+        "filter_[gender_eq]":"",
         "filter_[email_like]":"",
         "filter_[status_eq]":""
       },
