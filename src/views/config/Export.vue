@@ -78,7 +78,7 @@
 export default {
   name:"ResourcesAttachmentIndex",
   created() {
-    this.loadConfigEnumerate({service:"resources", enumerateName:"AttachmentTypeEnum"}).then((r) => this.typeOptions = r.data.data);
+    this.loadConfigEnumerate({service:"config", enumerateName:"AttachmentTypeEnum"}).then((r) => this.typeOptions = r.data.data);
     this.loadData();
   },
   methods:{

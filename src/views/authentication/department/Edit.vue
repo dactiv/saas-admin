@@ -73,7 +73,7 @@ export default {
       form: {
         id:null,
         name: "",
-        type:20,
+        type:10,
         parentId:undefined,
         remark: "",
       },

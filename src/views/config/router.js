@@ -74,7 +74,8 @@ export const router = [{
     meta: {
         title: "编辑轮播图",
         authentication: true,
-        parent: "basic"
+        parent: "basic",
+        selectMenu: process.env.VUE_APP_SITE_ROOT + "/config/carousel"
     }
 },{
     path: "config/access/crypto",

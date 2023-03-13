@@ -128,7 +128,7 @@ export default {
         parentId:"",
         removable: 1,
         modifiable: 1,
-        status: "1",
+        status: 1,
         remark: "",
       },
       rules: {
